@@ -2,13 +2,13 @@ from qiskit import QuantumCircuit, transpile
 from qiskit_aer import Aer
 
 # Step 1: Create circuit with 3 qubits and 3 classical bits
-qc = QuantumCircuit(3, 3)
+qc = QuantumCircuit(5, 5)
 
 # Step 2: Apply Hadamard gate on all 3 qubits
-qc.h([0, 1, 2])
+qc.h([0, 1, 2,3,4])
 
 # Step 3: Measure all qubits
-qc.measure([0, 1, 2], [0, 1, 2])
+qc.measure([0, 1, 2,3,4], [0, 1, 2,3,4])
 
 # Step 4: Run simulation
 sim = Aer.get_backend('qasm_simulator')
